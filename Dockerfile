@@ -1,6 +1,8 @@
 # inspiration from https://hub.docker.com/r/geertjohan/pgmodeler-cli/dockerfile
 
-FROM ubuntu:18.04
+FROM ubuntu:20.04
+
+ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && apt-get install -y \
     build-essential \
@@ -17,7 +19,7 @@ RUN apt-get update && apt-get install -y \
     libqt5svg5-dev \
  && rm -rf /var/lib/apt/lists/*
 
-ENV PGM_VERSION "0.9.1"
+ENV PGM_VERSION "0.9.2"
 
 RUN mkdir -p /usr/local/src/pgmodeler
 WORKDIR "/usr/local/src/pgmodeler"
