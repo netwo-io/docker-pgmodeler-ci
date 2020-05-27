@@ -3,6 +3,7 @@
 FROM ubuntu:20.04
 
 ENV DEBIAN_FRONTEND=noninteractive
+ENV TZ=Europe/Paris
 
 RUN apt-get update && apt-get install -y \
     build-essential \
@@ -31,6 +32,6 @@ RUN cd /usr/local/src/pgmodeler/pgmodeler-$PGM_VERSION/ && qmake pgmodeler.pro &
 
 ENV QT_QPA_PLATFORM=offscreen
 
-ADD config /root/.config/pgmodeler/
+ADD ./config /root/.config/pgmodeler/
 
-CMD /usr/local/bin/pgmodeler-cli
+ENTRYPOINT ["/usr/local/bin/pgmodeler-cli"]
