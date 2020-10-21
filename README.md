@@ -13,7 +13,7 @@ $PG_MODELER_CLI --input /some/path/some.dbm --export-to-png --output /some/path/
 - Create PR that changes the Dockerfile
 - Merge it to master
 - Tag the commit in `vX.Y.Z` format
-- Docker hub will automatically [build and publish the image](https://hub.docker.com/repository/docker/netwo/pgmodeler-cli)
+- Docker hub will automatically [build and publish the image](https://hub.docker.com/r/netwo/pgmodeler-cli)
 
 # Inspiration
 
